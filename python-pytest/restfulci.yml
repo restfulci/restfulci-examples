@@ -1,0 +1,13 @@
+version: 1.0
+
+environment:
+  build:
+    context: ./python-pytest
+    dockerfile: ./Dockerfile
+
+command:
+  - pytest
+
+results:
+  - type: junit
+    path: /code/test-results
