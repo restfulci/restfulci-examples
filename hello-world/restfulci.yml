@@ -1,9 +1,7 @@
 version: 1.0
 
 environment:
-  build:
-    context: ./hello-world
-    dockerfile: ./Dockerfile
+  image: busybox:1.31
 
 command:
   - sh

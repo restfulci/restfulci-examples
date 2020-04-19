@@ -1,1 +1,1 @@
-echo "Hello world"
+touch /result/this.txt && ls /result

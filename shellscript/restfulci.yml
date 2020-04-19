@@ -8,3 +8,7 @@ environment:
 command:
   - sh
   - exec.sh
+
+results:
+  - type: plain-text
+    path: /result
