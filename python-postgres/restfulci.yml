@@ -1,0 +1,19 @@
+version: 1.0
+
+executor:
+  build:
+    context: ./python-postgres
+    dockerfile: ./Dockerfile
+
+sidecars:
+  - name: postgres
+    image: postgres:13.1
+    environment:
+      POSTGRES_DB: foo
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+command:
+  - sh
+  - -c
+  - "python3 app.py"
